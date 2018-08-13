@@ -18,7 +18,7 @@ def get_setting(name):
 
 
 def keyfmt(k, v=None):
-    prefix = get_setting('CACHE_PREFIX') + waffle.__version__
+    prefix = get_setting('CACHE_PREFIX') + waffle.__version__ + django.VERSION
     if v is None:
         key = prefix + k
     else:
